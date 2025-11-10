@@ -364,3 +364,70 @@ body {
 .item-5 {
     background-image: url('https://i.ibb.co/qLj1BgZZ/05.jpg');
 }
+
+/*divs formulario contacto-----------*/
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+    padding-top: 100px;
+}
+
+.formulario-contacto form aside {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.formulario-contacto form label {
+    margin-bottom: 5px;
+    color: var(--verdewl);
+    font-family: "Mabry Pro";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.formulario-contacto form input,
+.formulario-contacto form textarea {
+    padding: 10px;
+    border: 2px solid var(--naranjawl);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: "Mabry Pro";
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formulario-contacto form input:focus,
+.formulario-contacto form textarea:focus {
+    border-color: var(--naranjawl);
+    outline: none;
+}
+
+.formulario-contacto form button {
+    padding: 12px 20px;
+    background-color: var(--naranjawl);
+    color: var(--beigewl);
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.formulario-contacto form button:hover {
+    background-color: var(--naranjawl);
+    transform: scale(1.05);
+}
+
+.formulario-contacto h1 {
+    font-family: "Mabry Pro";
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--negrowl);
+}
