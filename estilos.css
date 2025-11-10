@@ -56,11 +56,17 @@
     padding: 0;
 }
 
-body {
-    background-color: var(--beigewl);
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+html {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--beigewl);
 }
 
 ul {
@@ -75,15 +81,6 @@ a {
     font-family: "Mabry Mono";
 }
 
-html,
-body {
-    height: 100%;
-}
-
-
-main {
-    flex: 1 0 auto;
-}
 
 /*titulos, parrafos e imagenes-----------*/
 
@@ -114,31 +111,29 @@ p {
 }
 
 /*header, nav y footer -----------*/
-header {
-    display: flex;
-    justify-content: center;
-    padding: 28px;
+
+.headerWL {
     background-image: url(img/background.svg);
     background-repeat: repeat;
     background-size: auto;
-}
-
-.header-content {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
     width: 100%;
-    max-width: 1020px;
 }
 
-nav {
+/* NAV con 3 elementos distribuidos con flex */
+.nav-header {
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 
 /* Botones y cajas */
 
-.botonera a,
+.nav-header a,
 .caja {
     color: var(--negrowl);
     padding: 10px 20px;
@@ -146,39 +141,35 @@ nav {
     border-radius: 30px;
 }
 
-.botonera a {
+.nav-header a {
     background-color: var(--beigewl);
 }
 
-.botonera a:hover {
+.nav-header a:hover {
     color: var(--beigewl);
     background-color: var(--negrowl);
 }
 
-.botonera a:active {
+.nav-header a:active {
     background-color: var(--griswl);
     color: var(--beigewl);
 }
 
-footer {
-    flex-shrink: 0;
+/*footer -----------*/
+
+.footer-wl {
+    padding: 15px;
+}
+
+.footer-contenido {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 50px 20px 20px;
+    gap: 32px;
 }
 
-.footer-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1020px;
-    margin: 0 auto;
-}
-
-.footer-content p {
+.footer-contenido p {
     text-align: right;
     font-family: "Mabry Mono";
     font-size: 16px;
@@ -193,7 +184,7 @@ footer {
     display: flex;
     justify-content: center;
     gap: 70px;
-    padding-top: 100px;
+    padding-top: 30px;
 }
 
 .texto-intro {
@@ -224,33 +215,30 @@ footer {
     border-radius: 30px;
 }
 
-.sociales {
-    width: auto;
+.footer-redes {
     display: flex;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
+    gap: 16px;
 }
 
-.sociales a {
+.footer-redes a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
 }
 
-.sociales img {
+.footer-redes img {
     width: 30px;
     height: 30px;
     display: block;
 }
 
 /* efecto hover sobre la imagen */
-.sociales a:hover img {
+.footer-redes a:hover img {
     transform: scale(1.05);
     transition: transform .18s ease-in-out;
 }
 
-.legal {
+.footer-legal {
     margin: 0;
     text-align: right;
 }
@@ -313,12 +301,6 @@ footer {
 
 /*divs galeria trabajos-----------*/
 
-html,
-body {
-    width: 100%;
-    height: 100%;
-}
-
 .container {
     padding: 40px 0;
     margin: 0 auto;
@@ -372,7 +354,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 70px;
-    padding-top: 100px;
+    padding-top: 30px;
 }
 
 .formulario-contacto form aside {
@@ -430,4 +412,138 @@ body {
     font-weight: 700;
     line-height: normal;
     color: var(--negrowl);
+}
+
+/* media responsive -----------*/
+
+@media (max-width: 850px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 10px;
+    }
+
+    nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    nav a {
+        padding: 10px 5px;
+        font-size: 0.8rem;
+        flex-grow: 1;
+        text-align: center;
+        margin: 0;
+        max-width: 33%;
+    }
+
+    section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding-top: 20px;
+    }
+
+    .texto-intro img {
+        max-width: 90%;
+        flex-basis: auto;
+    }
+
+    .gif1 {
+        border-right: none;
+        border-bottom: 2px solid var(--naranjawl);
+        padding: 0;
+    }
+
+    .gif1 img {
+        max-height: none;
+        align-self: center;
+        padding-bottom: 45px;
+    }
+
+    .texto-intro img {
+        align-self: center;
+        max-width: 50%;
+    }
+
+    .texto-intro {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .texto-intro h1,
+    h2 {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        margin-top: 40px;
+        flex-direction: column;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1020px;
+    }
+
+    .footer-redes {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .contenido-perfil {
+        display: flex;
+        width: 85%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgs-perfil {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        align-self: stretch;
+    }
+
+    .imgs-perfil img {
+        width: 90%;
+        flex-basis: auto;
+        max-height: none;
+    }
+
+    .texto-perfil {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .texto-perfil h2 {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .formulario-contacto h1 {
+        text-align: center;
+    }
 }
