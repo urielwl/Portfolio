@@ -178,11 +178,19 @@ footer {
     margin: 0 auto;
 }
 
+.footer-content p {
+    text-align: right;
+    font-family: "Mabry Mono";
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+
 /*divs y classes-----------*/
 
 .contenido-intro {
     display: flex;
-    align-items: center;
     justify-content: center;
     gap: 70px;
     padding-top: 100px;
@@ -208,8 +216,8 @@ footer {
     display: flex;
     align-items: center;
     gap: 60px;
-    border-right: 2px solid var(--naranjawl);  
-    padding-right: 80px; 
+    border-right: 2px solid var(--naranjawl);
+    padding-right: 80px;
 }
 
 .gif1 img {
@@ -245,4 +253,60 @@ footer {
 .legal {
     margin: 0;
     text-align: right;
+}
+
+/*divs perfil-----------*/
+
+.contenido-perfil {
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    padding-top: 30px;
+    margin: auto;
+}
+
+.imgs-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    align-self: stretch;
+}
+
+.imgs-perfil img {
+    border-radius: 30px;
+}
+
+.texto-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    align-self: stretch;
+}
+
+.texto-perfil p {
+    font-family: "Mabry Pro";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--negrowl);
+}
+
+.texto-perfil h2 {
+    font-family: "Mabry Pro";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--verdewl);
+}
+
+.software {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
