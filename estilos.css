@@ -43,6 +43,15 @@
     font-style: italic;
 }
 
+/*colores-----------*/
+:root {
+    --beigewl: #FCFED2;
+    --negrowl: #272620;
+    --verdewl: #009485;
+    --naranjawl: #FE8133;
+    --griswl: #45443F;
+}
+
 /*general y body-----------*/
 * {
     box-sizing: border-box;
@@ -52,7 +61,10 @@
 
 body {
     font-family: "Mabry Mono", sans-serif;
-    background-color: #fcfed2;
+    background-color: var(--beigewl);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 ul {
@@ -62,16 +74,25 @@ ul {
 a {
     text-decoration: none;
     font-size: 1.2rem;
-    color: #272620;
+    color: var(--negrowl);
     line-height: 1.5rem;
     font-family: "Mabry Mono Medium";
+}
+
+html, body {
+    height: 100%;
+}
+
+
+main {
+    flex: 1 0 auto;
 }
 
 /*titulos, parrafos e imagenes-----------*/
 h1,
 h2,
 h3 {
-    color: #272620;
+    color: var(--negrowl);
     text-align: center;
 }
 
@@ -130,27 +151,28 @@ nav {
 /* Botones y cajas */
 .botonera a,
 .caja {
-    color: #272620;
+    color: var(--negrowl);
     padding: 10px 20px;
-    border: 1px solid #272620;
+    border: 1px solid var(--negrowl);
     border-radius: 30px;
 }
 
 .botonera a {
-    background-color: #fcfed2;
+    background-color: var(--beigewl);
 }
 
 .botonera a:hover {
-    color: #fcfed2;
-    background-color: #009485ff;
+    color: var(--beigewl);
+    background-color: var(--negrowl);
 }
 
 .botonera a:active {
-    background-color: #535353;
-    color: #fcfed2;
+    background-color: var(--griswl);
+    color: var(--beigewl);
 }
 
 footer {
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,7 +191,7 @@ footer {
 
 /*divs y classes-----------*/
 
-#aboutme,
+.aboutme,
 #software {
     display: flex;
     flex-direction: column;
