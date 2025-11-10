@@ -310,3 +310,57 @@ footer {
     align-items: center;
     gap: 20px;
 }
+
+/*divs galeria trabajos-----------*/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    padding: 40px 0;
+    margin: 0 auto;
+    width: 1020px;
+}
+
+.gallery-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 70vh;
+}
+
+.item {
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    transition: flex 0.8s ease;
+
+    &:hover {
+        flex: 7;
+    }
+}
+
+.item-1 {
+    background-image: url('https://i.ibb.co/Rkm15BF6/01.jpg');
+}
+
+.item-2 {
+    background-image: url('https://i.ibb.co/ksdfnY94/02.jpg');
+}
+
+.item-3 {
+    background-image: url('https://i.ibb.co/99MfpP3W/03.jpg');
+}
+
+.item-4 {
+    background-image: url('https://i.ibb.co/LzQL12CV/04.jpg');
+}
+
+.item-5 {
+    background-image: url('https://i.ibb.co/qLj1BgZZ/05.jpg');
+}
