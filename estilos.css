@@ -114,12 +114,12 @@ header {
     background-size: auto;
 }
 
-.contenedor {
+.header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1020px;
 }
 
 nav {
@@ -152,10 +152,19 @@ nav {
 
 footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 50px 20px 20px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto;
 }
 
 /*divs y classes-----------*/
@@ -211,18 +220,32 @@ footer {
 }
 
 .sociales {
-    padding-left: 20px;
-    width: 200px;
+    width: auto;
     display: flex;
-    justify-content: space-around;
+    gap: 15px;
+    justify-content: center;
     align-items: center;
 }
 
-.legal {
-    text-align: right;
-    display: flex;
+.sociales a {
+    display: inline-flex;
     align-items: center;
-    padding-left: 0;
-    padding-right: 20px;
-    margin-left: auto;
+    justify-content: center;
+}
+
+.sociales img {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+/* efecto hover sobre la imagen */
+.sociales a:hover img {
+    transform: scale(1.05);
+    transition: transform .18s ease-in-out;
+}
+
+.legal {
+    margin: 0;
+    text-align: right;
 }
