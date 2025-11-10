@@ -1,43 +1,40 @@
 @charset "utf-8";
 
 /*fuentes-----------*/
+
 @font-face {
-    font-family: "Mabry Mono";
-    src: url(fonts/MabryMonoPro-Regular.ttf), format("truetype");
+    font-family: "Mabry Pro";
+    src: url(fonts/mabry-regular-pro.ttf), format("truetype");
     font-weight: normal;
     font-style: normal;
+    font-weight: 400;
 }
 
 @font-face {
-    font-family: "Mabry Mono Italic";
+    font-family: "Mabry Pro";
+    src: url(fonts/mabry-medium-pro.ttf), format("truetype");
+    font-weight: medium;
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Mabry Pro";
+    src: url(fonts/mabry-bold-pro.ttf), format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Mabry Mono";
     src: url(fonts/MabryMonoPro-Italic.ttf), format("truetype");
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
-    font-family: "Mabry Mono Medium";
-    src: url(fonts/MabryMonoPro-Medium.ttf), format("truetype");
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Mabry Mono Bold";
-    src: url(fonts/MabryMonoPro-Bold.ttf), format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Mabry Mono Bold Italic";
-    src: url(fonts/MabryMonoPro-BoldItalic.ttf), format("truetype");
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Mabry Mono Medium Italic";
+    font-family: "Mabry Mono";
     src: url(fonts/MabryMonoPro-MediumItalic.ttf), format("truetype");
     font-weight: medium;
     font-style: italic;
@@ -60,7 +57,6 @@
 }
 
 body {
-    font-family: "Mabry Mono", sans-serif;
     background-color: var(--beigewl);
     min-height: 100vh;
     display: flex;
@@ -76,10 +72,11 @@ a {
     font-size: 1.2rem;
     color: var(--negrowl);
     line-height: 1.5rem;
-    font-family: "Mabry Mono Medium";
+    font-family: "Mabry Mono";
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -89,36 +86,27 @@ main {
 }
 
 /*titulos, parrafos e imagenes-----------*/
-h1,
-h2,
-h3 {
-    color: var(--negrowl);
-    text-align: center;
-}
 
 h1 {
-    font-family: "Mabry Mono Bold", sans-serif;
-    font-size: 2rem;
-    line-height: 3rem;
+    font-family: "Mabry Pro";
+    font-size: 40px;
+    font-style: bold;
+    font-weight: 700;
 }
 
 h2 {
-    font-family: "Mabry Mono Medium", sans-serif;
-    font-size: 1.5rem;
-    line-height: 3.5rem;
-}
-
-h3 {
-    font-family: "Mabry Mono Bold Italic", sans-serif;
-    font-size: 1.6rem;
-    line-height: 5rem;
+    font-family: "Mabry Pro";
+    font-size: 26px;
+    font-style: medium;
+    font-weight: 500;
 }
 
 p {
-    text-wrap-style: balance;
-    text-align: center;
-    line-height: 1.5rem;
-    max-width: 600px;
+    font-family: "Mabry Pro";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .redondeo {
@@ -149,6 +137,7 @@ nav {
 }
 
 /* Botones y cajas */
+
 .botonera a,
 .caja {
     color: var(--negrowl);
@@ -191,55 +180,25 @@ footer {
 
 /*divs y classes-----------*/
 
-.aboutme,
-#software {
+.contenido-intro {}
+
+.texto-intro {
     display: flex;
+    width: 355px;
     flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 15px;
 }
 
-#aboutme article,
-#trabajos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.texto-intro h2 {
+    color: var(--verdewl);
 }
 
-#aboutme h1 {
-    padding-top: 40px;
+.gif-sep img {
+    border-radius: 30px;
 }
 
-#software ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-#trabajos h2 {
-    text-align: center;
-    margin-bottom: 1em;
-}
-
-#trabajos .identidades {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    max-width: 700px;
-    margin: 0 auto;
-    justify-content: center;
-}
-
-#trabajos .identidades img {
-    flex: 1 1 calc(33.333% - 1em);
-    max-width: calc(33.333% - 1em);
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    display: block;
-}
+.gif-sep {}
 
 .sociales {
     width: auto;
