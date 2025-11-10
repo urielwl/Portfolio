@@ -180,7 +180,13 @@ footer {
 
 /*divs y classes-----------*/
 
-.contenido-intro {}
+.contenido-intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    padding-top: 100px;
+}
 
 .texto-intro {
     display: flex;
@@ -190,15 +196,25 @@ footer {
     gap: 15px;
 }
 
+.texto-intro img {
+    border-radius: 30px;
+}
+
 .texto-intro h2 {
     color: var(--verdewl);
 }
 
-.gif-sep img {
-    border-radius: 30px;
+.gif1 {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    border-right: 2px solid var(--naranjawl);  
+    padding-right: 80px; 
 }
 
-.gif-sep {}
+.gif1 img {
+    border-radius: 30px;
+}
 
 .sociales {
     width: auto;
